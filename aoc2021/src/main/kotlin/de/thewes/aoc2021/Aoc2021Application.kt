@@ -30,8 +30,7 @@ class Aoc2021Application {
         try {
             val bean = applicationContext.getBean(selectDayOfAdvent, DayOfAdvent::class.java)
             bean.run()
-            println("Day $selectDayOfAdvent finished. Select another day or enter 'exit' to quit.")
-            selectDayOfAdvent()
+            println("Day $selectDayOfAdvent finished.")
         } catch (e: NoSuchBeanDefinitionException) {
             println("Day of Advent $selectDayOfAdvent not found. Please select a valid one...")
             runSelectedDayOfAdvent(applicationContext, selectDayOfAdvent())
